@@ -1,0 +1,467 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/*-- Style ke body */
+body {
+  font-family: 'Montsserat', sans-serif;
+
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*-- Style ke header */
+header.navbar-container {
+    width: 100%;
+    padding: 5px;
+    margin-inline: 0;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    background-color: #55883b;
+
+}
+
+/* -- Style ke logo */
+header.navbar-container .logo {
+  display: flex;
+  margin: 5px;
+}
+
+header.navbar-container .logo img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+/*-- Style ke navbar list */
+header.navbar-container .navbar-list {
+    display: flex;
+}
+
+header.navbar-container .navbar-list ul{
+    padding-left: 1rem;
+    gap: 2rem 1rem;
+    border-radius: 999px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.navbar-container .navbar-list li {
+  list-style: none;
+}
+
+header.navbar-container .navbar-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f0f0f0;
+  gap: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .navbar-list li a:hover, .kontakdrd:hover .dropbtn {
+  background-color: #f0f0f0;
+  color: #006633;
+}
+
+header.navbar-container .navbar-list li a.loginbtn, .dropbtn {
+    cursor: pointer;    
+}
+
+/*-- Style ke dropdown kontak */
+header .kontakdrd {
+    float: left;
+    overflow: hidden;
+}
+
+header .kontakdrd .dropbtn {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 999px;
+    white-space: nowrap;
+    outline: none;
+    color: white;
+    background-color: #55883b;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+    border: 0 !important;
+    gap: 1rem;
+}
+
+
+header .kontakdrd .dropdown-content {
+    display: none;
+    position: absolute;
+    gap: 1rem;
+    background-color: #55883b;
+    min-width: 160px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+    z-index: 1002;
+}
+
+header .kontakdrd .dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+}
+
+header .kontakdrd:hover .dropdown-content {
+    display: block;
+}
+
+/*-- Style ke main */
+main {
+    flex: 1;
+
+    width: 100%;
+    max-width: 1920px;
+    margin-inline: auto;
+    padding: 1rem 4rem 1rem 4rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*-- Style ke artikel */
+main article{
+    flex: 1;
+    display: flex;
+}
+
+article.tentang-kami {
+    width: 100%;
+    padding: 2rem;
+
+    flex: 1;
+    display: flex;
+}
+
+article.tim-kami {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article.tim-kami .anggota-tim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: row;
+}
+
+article.tim-kami .card {
+    width: 300px;
+    height: 630px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+
+article.tentang-kami .content-tentangkami h1 {
+    font-size: 2.5rem;
+    color: #55883b;
+    text-align: center;
+}
+
+article.tim-kami h2 {
+    font-size: 2rem;
+    color: #55883b;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+article.tim-kami .anggota-tim .card .card-content h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+article.tentang-kami .content-tentangkami p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/*-- Style ke form login */
+/*-- Style ke class modal */
+main .modal-login {
+    display: none; /* Tersembunyi */
+    position: fixed; /* Posisi tetap */
+    z-index: 1002; 
+    left: 0;
+    top: 0;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    transition: 0.5s; 
+}
+
+/*-- Style ke form modal-content-login */
+main .modal-login .modal-content-login {
+    position: relative;
+    background-color: white;
+    margin: 30px auto; /* 30px dari atas, posisi ditengah */
+    border: 3px solid #006633;
+    width: 50%; /* Ukuran form modal nya */
+}
+
+/*-- Style ke input */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #55883b;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input[type="password"] {
+  width: 100%;
+  padding-right: 40px; /* beri ruang untuk ikon */
+}
+
+.password-wrapper .show-hide {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 1.2em;
+}
+
+/*-- Style ke button */
+main .modal-login button {
+    background-color: #55883b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}  
+
+main .modal-login button:hover {
+    border: 3px solid #006633;
+    background-color: transparent;
+
+    color: #006633;
+}
+
+/*-- Style ke cancel button */
+main .modal-login .cancelbtn {
+    width: auto;
+    margin: 8px 8px;
+    padding: 14px 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+/*-- Style ke Close button (x) */
+main .modal-login .close2 {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+main .modal-login .close2:hover, .close2:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/*-- Style ke login avatar */
+main .modal-login .login-img {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+main .modal-login img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/*-- Style ke login form */
+main .modal-login .login-form {
+    padding: 16px;
+}
+
+/*-- Style ke lupa password */
+main span.pass {
+    float: right;
+    padding-top: 16px;
+    margin: 8px 8px;
+}
+
+
+
+/*-- Style ke aside */
+/*-- Style ke aside sosmed */
+main aside.sosmed {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside.sosmed .social-media {
+	height: 100%;
+	display: flex;
+}
+
+main aside.sosmed .social-media ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    background-color: #55883b;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main aside.sosmed .social-media ul li {
+    list-style: none;
+}
+
+main aside.sosmed .social-media ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+main aside.sosmed .social-media li a:hover {
+    color: #c2e799;
+}
+
+/*-- Style ke aside statistik */
+main aside.statistik {
+    display: flex;
+    flex-direction: column;
+    box-shadow: #006633 0px 5px 15px;
+
+    content: "";
+    clear: both;
+    display: table
+}
+
+main aside.statistik h3 {
+    font-size: 1.5rem;
+    color: #55883b;
+    background-color: #c2e799;
+    margin: 1rem;
+    white-space: nowrap;
+}
+
+main aside.statistik .content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main aside.statistik .content-container .counter-image {
+    max-width: 100%;
+    margin: 2rem;
+}
+
+main aside.statistik .content-container .statistik-content {
+    margin: 2rem;
+    white-space: nowrap;
+}
+
+
+/*-- Style ke footer */
+footer {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #55883b;
+    color: white;
+    text-align: center;
+}
+
+/*-- Medium devices 784px dan dibawahnya */
+@media screen and (max-width: 784px) {
+header.navbar-container {
+        flex-direction: column;
+}
+
+header.navbar-container .navbar-list ul {
+        flex-wrap: wrap;
+        column-gap: 1rem;
+}
+
+
+
+main {
+	padding: 1rem 3rem;
+}
+
+article.tim-kami .anggota-tim {
+    flex-direction: column;
+    align-items: center;
+}
+
+main aside.sosmed .social-media ul l1 a{
+        font-size: 1rem;
+}
+
+main aside.statistik .content-container {
+    flex-direction: column;
+    text-align: center;
+}
+}

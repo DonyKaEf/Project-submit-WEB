@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkOrder</title>
+    <link href="img/icon.wo.svg" rel="shorcut icon">
+
+    <!-- File CSS dan Javascript-->
+    <link rel="stylesheet" href="css/signupworkstyle.css">
+    <script src="script/scriptsuworker.js"></script>
+    
+
+    <!-- Monserrat Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+	integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    >
+
+</head>
+<body>
+    
+    <header class="navbar-container">
+    <a href="index.html" class="backbtn">
+    <div class="logo">
+        <img src="img/t.logo.wo.png" alt="Type Logo WorkOrder">
+    </div>
+    </a>
+    </header>
+    
+
+    <main>
+
+    <!-- Form Daftar sebagai pekerja -->
+    <div class="form-container">
+    <form class="formpekerja" action="pendaftaran.php" method="post">
+    <h1>Daftar sebagai pekerja</h1>
+    <p>Silahkan isi data pada form berikut untuk membuat akun</p>
+    <hr>
+
+    <label for="register-email"><b>Email</b></label>
+    <input type="text" placeholder="Masukan Email" name="email" id="register-email" required>
+
+    <label for="register-pass"><b>Password</b></label>
+        <div class="password-wrapper">
+        <input type="password" placeholder="Masukan Password" name="pass" id="register-pass" required>
+        <span class="show-hide">
+            <i class="fas fa-eye"></i>
+        </span>
+        </div>
+    <label for="register-pass-repeat"><b>Repeat Password</b></label>
+        <div class="password-wrapper">
+        <input type="password" placeholder="Ulangi Password" name="pass-repeat" id="register-pass-repeat" required>
+        <span class="show-hide">
+                <i class="fas fa-eye"></i>
+        </span>
+        </div>
+    <hr>
+
+    <p>Dengan mendaftar anda setuju dengan <a href="#">Syarat & Ketentuan</a> kami.</p>
+    <button type="submit" class="daftarbtn">Register</button>
+    
+    <div class="container-login">
+    <p>Daftar sebagai perusahaan? <a href="signup-company.html">Daftar di sini</a></p>
+    <p>Sudah punya akun? <a onclick="document.getElementById('login').style.display='block'" style="width: auto;" class="loginbtn"><u>Masuk di sini</u></a></p>
+    </div>
+    </form>
+    </div>
+
+    <aside class="faq-content">
+        <h2 class="aside-title">Apakah kamu punya pertanyaan?</h2>
+        <p class="aside-text">Mungkin daftar pertanyaan yang sering diajukan dibawah ini dapat membantu. Namun jika tidak ada pertanyaan yang sesuai atau jawaban yang kamu butuhkan. 
+            Kamu dapat menghubungi customer service di media social kami atau melalu email yang ada.
+            FAQ ini hanya berisi dafatar pertanyaan seputar pendaftaran silahkan klik gambar di bawah ini. Untuk FAQ yang lebih lengakap, silahkan kunjungi halaman kami <a href="#">di sini</a>.
+        </p>
+        <button onclick="showhidefunction()"><img src="img/faq.png" alt="FAQ Image" class="faq-image"></button>
+        <div id="faq-list">
+            <ol>
+                <li><strong>Apa perbedaan akun pekerja dan perusahaan?</strong> <br> Perbedaanya ada pada fungsi dan fitur yang dapat dimiliki. Akun pekerja digunakan untuk mendapatkan pekerjaan baik pekerjaan sampingan maupun tetap.
+                Akun perusahaan digunakan untuk mendapatkan pekerja, mencari tender, dsb. </li>
+                <li><strong>Apakah saya bisa mendaftar sebagai pekerja dan perusahaan sekaligus?</strong> <br> Tidak, kamu hanya bisa mendaftar sebagai salah satu akun saja.</li>
+                <li><strong>Apakah saya bisa mengubah akun saya dari pekerja ke perusahaan?</strong> <br> Tidak, kamu tidak bisa mengubah akunmu. Kamu harus mendaftar ulang dengan akun yang berbeda.</li>
+                <li><strong>Apakah saya bisa mengubah akun saya dari perusahaan ke pekerja?</strong> <br> Tidak, kamu tidak bisa mengubah akunmu. Kamu harus mendaftar ulang dengan akun yang berbeda.</li>
+                <li><strong>lorem?</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet obcaecati quas voluptatibus consectetur expedita doloribus temporibus! Placeat ullam corporis ut, ab earum tempora impedit, laborum harum excepturi voluptatum praesentium? Facilis.</li>
+            </ol>
+        </div>
+    </aside>
+    
+    <!-- Form Login tersembunyi-->
+        <div id="login" class="modal-login">
+            <form class="modal-content-login" action="login.php" method="post">
+                <div class="login-img">
+                    <span onclick="document.getElementById('login').style.display='none'" class="close2" title="Tutup">&times;</span>
+                    <img src="img/avatar.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="login-form">
+                    <label for="login-email"><b>Email</b></label>
+                    <input type="text" id="login-email" placeholder="Masukan Email" name="email" required>
+
+                    <label for="login-pass"><b>Password</b></label>
+                        <div class="password-wrapper">
+                        <input type="password" id="login-pass" placeholder="Masukan Password" name="pass" required>
+                        <span class="show-hide">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        </div>
+                      
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Ingat saya
+                    </label>
+                </div>
+
+                <div class="login-form2" style="background-color: white;">
+                    <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="pass"><a href="#">Lupa password</a></span>
+                </div>
+            </form>
+            <script>
+            // Memanggil modal
+            var modal = document.getElementById('login');
+
+            // Saat pengguna mengklik di luar modal, tutup modal
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+            </script>
+
+        </div>
+    </main>
+
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 WorkOrder. All rights reserved.</p>
+    </div>    
+</footer> 
+</body>
+</html>

@@ -1,0 +1,263 @@
+*,
+*::before,
+*::after {
+ box-sizing: border-box
+}
+
+/*-- Style ke body */
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-- Style ke header */
+header.navbar-container {
+    width: 100%;
+    padding: 5px;
+    margin-inline: 0;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    background-color: white;
+
+}
+
+/* -- Style ke logo */
+header.navbar-container .logo {
+  display: flex;
+  margin: 5px;
+}
+
+header.navbar-container .logo img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Style ke form-container */
+.form-container {
+  padding: 16px;
+}
+
+/* Syle ke input */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input[type="password"] {
+  width: 100%;
+  padding-right: 40px; /* beri ruang untuk ikon */
+}
+
+.password-wrapper .show-hide {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 1.2em;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.daftarbtn {
+  background-color: #55883b;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.loginbtn {
+    cursor: pointer;
+}
+
+.daftarbtn:hover {
+  opacity:1;
+}
+
+/* Style ke link */
+a {
+  color: dodgerblue;
+}
+
+/* Style ke container-login */
+.container-login {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/*-- Style ke form login */
+/*-- Style ke class modal */
+main .modal-login {
+    display: none; /* Tersembunyi */
+    position: fixed; /* Posisi tetap */
+    z-index: 1002; 
+    left: 0;
+    top: 0;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    transition: 0.5s; 
+}
+
+/*-- Style ke form modal-content-login */
+main .modal-login .modal-content-login {
+    position: relative;
+    background-color: white;
+    margin: 30px auto; /* 30px dari atas, posisi ditengah */
+    border: 3px solid #006633;
+    width: 50%; /* Ukuran form modal nya */
+}
+
+/*-- Style ke input */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #55883b;
+    box-sizing: border-box;
+}
+
+/*-- Style ke button */
+main .modal-login button {
+    background-color: #55883b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}  
+
+main .modal-login button:hover {
+    border: 3px solid #006633;
+    background-color: transparent;
+
+    color: #006633;
+}
+
+/*-- Style ke cancel button */
+main .modal-login .cancelbtn {
+    width: auto;
+    margin: 8px 8px;
+    padding: 14px 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+/*-- Style ke Close button (x) */
+main .modal-login .close2 {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+main .modal-login .close2:hover, .close2:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/*-- Style ke login avatar */
+main .modal-login .login-img {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+main .modal-login img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/*-- Style ke login form */
+main .modal-login .login-form {
+    padding: 16px;
+}
+
+/*-- Style ke lupa password */
+main span.pass {
+    float: right;
+    padding-top: 16px;
+    margin: 8px 8px;
+}
+
+/*-- Style ke aside */
+aside.faq-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+aside.faq-content h2 {
+  text-align: center;
+}
+
+aside.faq-content p.aside-text {
+  text-align: center;
+}
+
+aside.faq-content img {
+  width: 150px;
+  height: auto;
+}
+
+aside.faq-content button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+#faq-list {
+  display: none; /* Tersembunyi secara default */
+}
+
+/* Style ke footer */
+footer {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: white;
+    color: #006633;
+    text-align: center;
+}

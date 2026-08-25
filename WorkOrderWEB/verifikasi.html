@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkOrder</title>
+    <link href="img/icon.wo.svg" rel="shorcut icon">
+
+    <!-- File CSS dan Javascript-->
+    <link rel="stylesheet" href="css/verifystyles.css">
+    <script src="script/scriptlogin.js" defer></script>
+
+    <!-- Monserrat Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+	integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    >
+</head>
+<body>
+        <!-- Tampilan Navbar -->
+    <header class="navbar-container">
+    <div class="logo">
+        <img src="img/w.t.logo.wo.png" alt="Type Logo WorkOrder">
+    </div>
+    <nav class="navbar-list">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="verifikasi.html">Verifikasi</a></li>
+            <li><a href="tentangkami.html">Tentang Kami</a></li>
+            <li>
+                <div class="kontakdrd">
+                    <button class="dropbtn">Kontak<i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <p>   </p>
+                        <a href="https://wa.me/message/HNAAJKVQH54YN1" target="_blank" rel="noopener">Whatsapp</a>
+                        <a href="mailto:support@workorder.com" target="_blank" rel="noopener">Email</a>
+                        <a href="https://maps.google.com/" target="_blank" rel="noopener">Kantor</a>
+                    </div>
+                </div>
+            </li>
+            <li><a onclick="document.getElementById('login').style.display='block'" style="width: auto;" class="loginbtn">Masuk</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <article>
+            <div class="commingsoon">
+            <h1> Segera Hadir </h1>
+            </div>
+            <div class="content-image">
+                <img src="img/logo.loading.gif" alt="Loading Image Logo">
+            </div>
+        </article>
+
+        <!-- Form Login tersembunyi-->
+        <div id="login" class="modal-login">
+            <form class="modal-content-login" action="login.php" method="post">
+                <div class="login-img">
+                    <span onclick="document.getElementById('login').style.display='none'" class="close2" title="Tutup">&times;</span>
+                    <img src="img/avatar.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="login-form">
+                    <label for="login-email"><b>Email</b></label>
+                    <input type="text" id="login-email" placeholder="Masukan Email" name="email" required>
+
+                    <label for="login-pass"><b>Password</b></label>
+                        <div class="password-wrapper">
+                        <input type="password" id="login-pass" placeholder="Masukan Password" name="pass" required>
+                        <span class="show-hide">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        </div>
+                        
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Ingat saya
+                    </label>
+                </div>
+
+                <div class="login-form2" style="background-color: white;">
+                    <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="pass"><a href="#">Lupa password</a></span>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- Kontak Sosial Media -->
+        <aside class="sosmed">
+            <div class="social-media">
+                <ul>
+					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+				</ul>
+            </div>
+        </aside>
+
+        <!--Info tambahan-->
+        <aside class="info">
+            <div class="info-container">
+            <div class="info-content">
+                <h2>Informasi <i class="fas fa-exclamation-triangle"></i> </h2>
+                <p>Halaman ini akan segera hadir. Silakan kunjungi sosial media kami untuk mengikuti perkembangannya.</p>
+            </div>
+            <div class="info-image">
+                <p style="font-size: 0.5rem;"> by admin-kaef </p>
+                <img src="img/me-avatar.jpg" alt="admin-kaef">
+            </div>
+            </div>
+        </aside>
+    </main>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 WorkOrder. All rights reserved.</p>
+    </div>    
+</footer>
+</body>
+</html>

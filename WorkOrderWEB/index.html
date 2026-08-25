@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkOrder</title>
+    <link href="img/icon.wo.svg" rel="shorcut icon">
+
+    <!-- File CSS dan Javascript-->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script/script.js"></script>
+    <script src="script/scriptkontak.js" defer></script>
+    <script src="script/scriptlogin.js" defer></script>
+
+    <!-- Monserrat Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+	integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    >
+
+</head>
+<body>
+
+    <!-- Load Cover diawal -->
+    <div class="cover">
+
+        <img src="img/s.logo.wo.png" alt="Cover Image">
+       
+    </div>
+
+    <!-- Tampilan Navbar -->
+    <header class="navbar-container">
+    <div class="logo">
+        <img src="img/w.t.logo.wo.png" alt="Type Logo WorkOrder">
+    </div>
+    <nav class="navbar-list">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="verifikasi.html">Verifikasi</a></li>
+            <li><a href="tentangkami.html">Tentang Kami</a></li>
+            <li>
+                <div class="kontakdrd">
+                    <button class="dropbtn">Kontak<i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <p>   </p>
+                        <a href="https://wa.me/message/HNAAJKVQH54YN1" target="_blank" rel="noopener">Whatsapp</a>
+                        <a href="mailto:support@workorder.com" target="_blank" rel="noopener">Email</a>
+                        <a href="https://maps.google.com/" target="_blank" rel="noopener">Kantor</a>
+                    </div>
+                </div>
+            </li>
+            <li><a onclick="document.getElementById('login').style.display='block'" style="width: auto;" class="loginbtn">Masuk</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+
+        <!-- Konten Utama -->
+        
+        <div class="content">
+        <article>
+            <div class="content-description">
+               <h1 class="title">WORKORDER</h1>
+               <p>
+                 Kami yakin bahwa perusahaan atau pemberi kerja dengan pekerja memiliki posisi yang sama dan saling membutuhkan. 
+                 Untuk itu platform kami dibuat untuk memudahkan kedua belah pihak menemukan satu sama lain dengan cara yang lebih efektif dan efisien. 
+                 Dengan terus meningkatnya pengguna baik dari pekerja maupun perusahaan, kami yakin bahwa platform kami dapat membantu anda menemukan pekerjaan atau pekerja yang tepat. 
+               </p> 
+
+               <button onclick="document.querySelector('.signup-first').scrollIntoView({behavior: 'smooth'})">Lebih Lanjut</button>
+            </div>
+            <div class="content-image">
+                <img src="img/out.logo.wo.png" alt="Logo WorkOrder">
+            </div>
+        </article>
+        </div>
+        
+
+        <!-- Form Pendaftaran -->
+        <section class="signup-first">
+        <div class="card">
+            <div class="card-body">
+            <img src="img/pekerja.jpg" alt="Pekerja">
+            <h2 class="card-title">Daftar Sebagai Pekerja</h2>
+            <a href="signup-worker.html" target="_blank" rel="noopener" class="daftar1">Daftar</a>
+            </div>
+        </div>    
+        
+        <div class="card">
+            <div class="card-body">
+            <img src="img/perusahaan.jpg" alt="Perusahaan">
+            <h2 class="card-title">Daftar Sebagai Perusahaan</h2>
+            <a href="signup-company.html" target="_blank" rel="noopener" class="daftar2">Daftar</a>
+            </div>
+        </div>
+        </section>
+
+        <!-- Form Login tersembunyi-->
+        <div id="login" class="modal-login">
+            <form class="modal-content-login" action="login.php" method="post">
+                <div class="login-img">
+                    <span onclick="document.getElementById('login').style.display='none'" class="close2" title="Tutup">&times;</span>
+                    <img src="img/avatar.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="login-form">
+                    <label for="login-email"><b>Email</b></label>
+                    <input type="text" id="login-email" placeholder="Masukan Email" name="email" required>
+
+                    <label for="login-pass"><b>Password</b></label>
+                        <div class="password-wrapper">
+                        <input type="password" id="login-pass" placeholder="Masukan Password" name="pass" required>
+                        <span class="show-hide">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        </div>
+
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Ingat saya
+                    </label>
+                </div>
+
+                <div class="login-form2" style="background-color: white;">
+                    <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="pass"><a href="#">Lupa password</a></span>
+                </div>
+            </form>
+
+        </div>
+        
+        <!-- Kontak Sosial Media -->
+        <aside class="sosmed">
+            <div class="social-media">
+                <ul>
+					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+				</ul>
+            </div>
+        </aside>
+        
+        <!-- Aside Testimoni -->
+        <aside class="testimoni">
+            <h2>Testimoni dari pengguna kami</h2>
+            <hr>
+            <div class="testimoni-content">
+                <div class="testimoni-img">
+                <img src="img/lil-bah.jpg" alt="foto lil-bah">
+                </div>
+                <div class="testimoni-text">
+                <p><span>Lil Bah.</span> Tenaga Ahli PT GIG Bait</p>
+                <hr>
+                <p>"WorkOrder telah membantu saya menemukan pekerjaan yang sesuai dengan keahlian saya. Prosesnya mudah dan cepat!"</p>
+                </div>
+            </div>
+
+            <div class="testimoni-content">
+                <div class="testimoni-img">
+                <img src="img/frankie-cord.jpg" alt="foto frankie-cord">
+                </div>
+                <div class="testimoni-text">
+                <p><span>Frankie-Cord.</span> Freelance designer </p>
+                <hr>
+                <p>"Terima kasih WorkOrder telah membantuku menemukan client dari seluruh penjuru dunia. Sistemnya ramah untuk pemula."</p>
+                </div>
+            </div>
+
+            <div class="testimoni-content">
+                <div class="testimoni-img">
+                <img src="img/ali-morshed.jpg" alt="foto ali-morshed">
+                </div>
+                <div class="testimoni-text">
+                <p><span>Ali Morshed.</span> CEO PT Mencari Cinta Sejati </p>
+                <hr>
+                <p>"Bergabung dengan WorkOrder kami bisa menemukan tenaga kerja yang handal dan profesional."</p>
+                </div>
+            </div>
+
+            <div class="testimoni-content">
+                <div class="testimoni-img">
+                <img src="img/christina.jpg" alt="foto christina">
+                </div>
+                <div class="testimoni-text">
+                <p><span>Christina.</span> Junior Marketing </p>
+                <hr>
+                <p>"Aku mendapat pekerjaan pertamaku yay, thanks to WorkOrder"</p>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+    
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 WorkOrder. All rights reserved.</p>
+    </div>    
+</footer>            
+</body>
+</html>
